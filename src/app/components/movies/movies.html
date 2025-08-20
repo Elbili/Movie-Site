@@ -1,0 +1,27 @@
+<section class="bg-secondary p-5 border">
+    <div class="container">
+        <div class="row g-2">
+            @for (movie of Allmovies; track $index) {
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img class="card-img-top w-100"
+                        [src]="movie.poster_path ? imagePath + movie.poster_path : 'assets/istockphoto-1147544807-612x612.jpg'"
+                        [alt]="movie.title || movie.name" />
+                    <div class="card-body">
+                        @if (movie.title) {
+                        <h4 class="card-title">{{movie.title}}</h4>
+                        }@else {
+                        <h4 class="card-title">{{movie.name}}</h4>
+                        }
+                        <p class="card-text">
+                            OverView {{ movie.overview | slice:0:120}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            }
+
+
+        </div>
+    </div>
+</section>
