@@ -16,3 +16,9 @@ transition: all 0.8s;
     transform: scale(1.1) !important;
     border: 0.5px dotted black !important;
 }
+
+@media screen and (max-width: 1200px) {
+    .container{
+    margin-top: 450px !important;
+}
+}
